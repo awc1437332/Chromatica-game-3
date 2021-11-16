@@ -569,6 +569,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Key
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 04ee70aeba6f3e249af1b3f6efb1a8dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Key
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 04ee70aeba6f3e249af1b3f6efb1a8dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04ee70aeba6f3e249af1b3f6efb1a8dc, type: 3}
 --- !u!1001 &14994187
@@ -3106,6 +3116,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 232362743}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &235173906 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1228265208}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &235173912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235173906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8b57195dafa9d440b59f979478c1035, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reticle: {fileID: 1452976131}
+  maxDistance: 2.5
+  cam: {fileID: 1942802012}
 --- !u!1001 &237557600
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16784,6 +16815,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 019714739cb6756499b2a74cb1a1b00b, type: 3}
+--- !u!1 &1392031260 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 04ee70aeba6f3e249af1b3f6efb1a8dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 14760027}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1392031263
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392031260}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.45823896, y: 0.17896503, z: 0.058801413}
+  m_Center: {x: 0, y: -0.0000019073486, z: -0.00000016205013}
 --- !u!1001 &1392785114
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17963,7 +18013,7 @@ GameObject:
   - component: {fileID: 1452976132}
   - component: {fileID: 1452976131}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Reticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24157,6 +24207,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 019714739cb6756499b2a74cb1a1b00b,
     type: 3}
   m_PrefabInstance: {fileID: 1938018425}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &1942802012 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1228265208}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1946056222
 PrefabInstance:
