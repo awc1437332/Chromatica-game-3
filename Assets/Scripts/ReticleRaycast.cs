@@ -84,7 +84,12 @@ public class ReticleRaycast : MonoBehaviour
     }
 
     // Use FixedUpdate since a Raycast is a physics-related query.
-    public void FixedUpdate()
+    void FixedUpdate()
+    {
+        
+    }
+
+    public void Cast()
     {
         // Draw a ray for debugging purposes.
         //Debug.DrawRay(
@@ -110,9 +115,9 @@ public class ReticleRaycast : MonoBehaviour
 
             KeyGrabbed = true;
 
-
+            Destroy(hit.transform.gameObject);
         }
-            
+
 
         if (raycastCollided && hit.transform.CompareTag("Door"))
         {

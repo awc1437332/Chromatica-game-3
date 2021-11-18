@@ -7,14 +7,17 @@ public class FPSPlayerBehaviour : MonoBehaviour
     [SerializeField]
     private float keyCount;
 
-    ReticleRaycast reticle;
+    private ReticleRaycast reticleScript;
+
+    //ReticleRaycast reticle;
 
     // Start is called before the first frame update
     void Start()
     {
         keyCount = 0;
+        reticleScript = GetComponent<ReticleRaycast>();
 
-        reticle = GameObject.FindGameObjectWithTag("FPSController").GetComponent<ReticleRaycast>();
+        //reticle = GameObject.FindGameObjectWithTag("FPSController").GetComponent<ReticleRaycast>();
     }
 
     // Update is called once per frame
@@ -22,10 +25,8 @@ public class FPSPlayerBehaviour : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
-            Debug.Log("Mouse pressed");
+            reticleScript.Cast();
         }
-
-        reticle.FixedUpdate();
     }
 
     //private void OnCollisionEnter(Collision collision)
