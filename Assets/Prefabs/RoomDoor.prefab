@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 7151776030903279314}
   - component: {fileID: 3307907121617854964}
   - component: {fileID: 2636272824375325796}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RoomDoor
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,6 +108,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawn: {fileID: 0}
+  roomType: 0
+  keysRequired: 0
 --- !u!1 &7353710880336607201
 GameObject:
   m_ObjectHideFlags: 0

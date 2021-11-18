@@ -104,5 +104,11 @@ public class ReticleRaycast : MonoBehaviour
         // to the console.
         if (raycastCollided && hit.transform.CompareTag("Key"))
             Debug.Log("Found key");
+
+        if (raycastCollided && hit.transform.CompareTag("Door"))
+        {
+            hit.transform.gameObject.GetComponent<Room>().Activate();
+            print("Test");
+        }
     }
 }
