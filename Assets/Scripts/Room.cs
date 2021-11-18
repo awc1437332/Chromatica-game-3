@@ -20,7 +20,7 @@ public class Room : MonoBehaviour
         spawnLocation = spawn.transform.position;
 
         //DEBUG
-        monsterSpawnLocation = spawn.transform.position;
+        monsterSpawnLocation = spawn.transform.position - new Vector3(0, 0, 3.0f);
     }
 
     // Update is called once per frame

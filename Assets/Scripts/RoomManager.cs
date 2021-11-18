@@ -16,11 +16,16 @@ public class RoomManager : MonoBehaviour
 
     private RoomType currentType;
 
+    public GameObject monsterObject;
+    private AgentMovement monster;
+
     // Start is called before the first frame update
     void Start()
     {
         currentType = RoomType.Puzzle;
         //player = playerObject.GetComponent<Player>();
+
+        monster = monsterObject.GetComponent<AgentMovement>();
     }
 
     // Update is called once per frame
@@ -42,14 +47,14 @@ public class RoomManager : MonoBehaviour
         if (currentType != RoomType.Chase)
         {
             //Disable the monster
-            //monster.isActive = false;
+            monsterObject.SetActive(false);
 
             //Adjust Atmosphere
         }
         else //Chase Room
         {
             //Enable and place the monster
-            //monster.Activate(_monsterSpawnLocation); SET REFERENCE TO PLAYER
+            monster.Activate(_monsterSpawnLocation);
 
             //Adjust Atmosphere
         }
@@ -61,5 +66,7 @@ public class RoomManager : MonoBehaviour
         Destroy(GameObject.Find("FPSController"));
         GameObject newPlayer = Instantiate(playerObject, _spawnLocation, Quaternion.identity);
         newPlayer.name = "FPSController";
+
+        monster.target = newPlayer.transform;
     }
 }
