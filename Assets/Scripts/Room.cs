@@ -26,16 +26,16 @@ public class Room : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            if (Mathf.Abs((GameObject.Find("FPSController").transform.position - transform.position).magnitude) <= 5)
-            {
-                    Activate();
-            }
-        }
+        //if (Input.GetKeyDown(KeyCode.E))
+        //{
+        //    if (Mathf.Abs((GameObject.Find("FPSController").transform.position - transform.position).magnitude) <= 5)
+        //    {
+        //            Activate();
+        //    }
+        //}
     }
 
-    private void Activate()
+    public void Activate()
     {
         if (true) //gameObject.GetComponent<Player>().Keys == keysRequired
         {
