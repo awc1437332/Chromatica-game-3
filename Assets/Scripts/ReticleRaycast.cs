@@ -58,6 +58,8 @@ public class ReticleRaycast : MonoBehaviour
     /// Layer mask to Raycast to.
     /// </summary>
     private int layerMask;
+
+    public bool KeyGrabbed = false;
     
     // Start is called before the first frame update
     void Start()
@@ -82,7 +84,7 @@ public class ReticleRaycast : MonoBehaviour
     }
 
     // Use FixedUpdate since a Raycast is a physics-related query.
-    private void FixedUpdate()
+    public void FixedUpdate()
     {
         // Draw a ray for debugging purposes.
         //Debug.DrawRay(
@@ -103,7 +105,14 @@ public class ReticleRaycast : MonoBehaviour
         // If a collision is detected, and the object is the key, log a message
         // to the console.
         if (raycastCollided && hit.transform.CompareTag("Key"))
+        {
             Debug.Log("Found key");
+
+            KeyGrabbed = true;
+
+
+        }
+            
 
         if (raycastCollided && hit.transform.CompareTag("Door"))
         {
