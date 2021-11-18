@@ -103,9 +103,7 @@ public class ReticleRaycast : MonoBehaviour
         // If a collision is detected, and the object is the key, log a message
         // to the console.
         if (raycastCollided && hit.transform.CompareTag("Key"))
-        {
             Debug.Log("Found key");
-        }
 
         if (raycastCollided && hit.transform.CompareTag("Door"))
         {
