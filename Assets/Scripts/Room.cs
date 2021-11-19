@@ -20,7 +20,7 @@ public class Room : MonoBehaviour
         spawnLocation = spawn.transform.position;
 
         //DEBUG
-        monsterSpawnLocation = spawn.transform.position - new Vector3(0, 0, 3.0f);
+        monsterSpawnLocation = spawn.transform.position - new Vector3(5.0f, 0, 0);
     }
 
     // Update is called once per frame
@@ -37,20 +37,12 @@ public class Room : MonoBehaviour
 
     public void Activate()
     {
-        if (true) //gameObject.GetComponent<Player>().Keys == keysRequired
+        if (GameObject.Find("FPSController").GetComponent<FPSPlayerBehaviour>().keyCount >= keysRequired)
         {
             GameObject.Find("RoomManager").GetComponent<RoomManager>().LoadRoom(roomType, spawnLocation, monsterSpawnLocation);
             //GameObject.Find("FPSController").GetComponent<CharacterController>().Move(spawnLocation);
             GameObject.Find("RoomManager").GetComponent<RoomManager>().InstantiatePlayer(spawnLocation);
             //GameObject.Find("FPSController").transform.position = spawnLocation;
-        }
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            print("test");
         }
     }
 }

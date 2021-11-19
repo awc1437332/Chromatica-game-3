@@ -40,9 +40,6 @@ public class RoomManager : MonoBehaviour
         //Sets the new room type
         currentType = _roomType;
 
-        //Removes the player's keys from the previous room
-        //player.RemoveKeys();
-
         //Toggles the monster and atmosphere based on the room type
         if (currentType != RoomType.Chase)
         {
@@ -63,9 +60,10 @@ public class RoomManager : MonoBehaviour
     //Instantiates a player inside of a new room
     public void InstantiatePlayer(Vector3 _spawnLocation)
     {
-        Destroy(GameObject.Find("FPSController"));
         GameObject newPlayer = Instantiate(playerObject, _spawnLocation, Quaternion.identity);
+        Destroy(GameObject.Find("FPSController"));
         newPlayer.name = "FPSController";
+        newPlayer.transform.GetComponentInChildren<Camera>().enabled = true;
 
         monster.target = newPlayer.transform;
     }

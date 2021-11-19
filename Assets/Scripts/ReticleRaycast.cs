@@ -62,6 +62,8 @@ public class ReticleRaycast : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        reticle = GameObject.Find("Canvas").transform.Find("Reticle").GetComponent<Image>();
+
         // Raycast from the centre of the screen, accounting for the reticle's
         // dimensions.
         reticleWidth = reticle.rectTransform.rect.width;

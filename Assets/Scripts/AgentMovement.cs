@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI; // Required for navmesh agent behaviour
+using UnityEngine.SceneManagement;
 
 public class AgentMovement : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class AgentMovement : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -34,6 +36,7 @@ public class AgentMovement : MonoBehaviour
             if (collision.gameObject.tag == "Player")
             {
                 //GameObject.Find("StateManager").GetComponent<StateManager>().EndGame();
+                SceneManager.LoadScene("SampleScene");
             }
         }
     }
