@@ -20,4 +20,21 @@ public class AgentMovement : MonoBehaviour
         // Update agent destination each frame to account for player movement.
         agent.destination = target.position;
     }
+
+    public void Activate(Vector3 _position)
+    {
+        transform.position = _position;
+        gameObject.SetActive(true);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (isActiveAndEnabled)
+        {
+            if (collision.gameObject.tag == "Player")
+            {
+                //GameObject.Find("StateManager").GetComponent<StateManager>().EndGame();
+            }
+        }
+    }
 }
