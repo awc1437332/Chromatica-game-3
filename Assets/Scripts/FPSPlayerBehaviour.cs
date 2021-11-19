@@ -5,7 +5,7 @@ using UnityEngine;
 public class FPSPlayerBehaviour : MonoBehaviour
 {
     [SerializeField]
-    private float keyCount;
+    public float keyCount;
 
     private ReticleRaycast reticleScript;
 

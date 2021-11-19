@@ -58,8 +58,6 @@ public class ReticleRaycast : MonoBehaviour
     /// Layer mask to Raycast to.
     /// </summary>
     private int layerMask;
-
-    public bool KeyGrabbed = false;
     
     // Start is called before the first frame update
     void Start()
@@ -113,16 +111,15 @@ public class ReticleRaycast : MonoBehaviour
         {
             Debug.Log("Found key");
 
-            KeyGrabbed = true;
-
             Destroy(hit.transform.gameObject);
+
+            GameObject.Find("FPSController").GetComponent<FPSPlayerBehaviour>().keyCount++;
         }
 
 
         if (raycastCollided && hit.transform.CompareTag("Door"))
         {
             hit.transform.gameObject.GetComponent<Room>().Activate();
-            print("Test");
         }
     }
 }
