@@ -82,7 +82,12 @@ public class ReticleRaycast : MonoBehaviour
     }
 
     // Use FixedUpdate since a Raycast is a physics-related query.
-    private void FixedUpdate()
+    void FixedUpdate()
+    {
+        
+    }
+
+    public void Cast()
     {
         // Draw a ray for debugging purposes.
         //Debug.DrawRay(
@@ -103,12 +108,18 @@ public class ReticleRaycast : MonoBehaviour
         // If a collision is detected, and the object is the key, log a message
         // to the console.
         if (raycastCollided && hit.transform.CompareTag("Key"))
+        {
             Debug.Log("Found key");
+
+            Destroy(hit.transform.gameObject);
+
+            GameObject.Find("FPSController").GetComponent<FPSPlayerBehaviour>().keyCount++;
+        }
+
 
         if (raycastCollided && hit.transform.CompareTag("Door"))
         {
             hit.transform.gameObject.GetComponent<Room>().Activate();
-            print("Test");
         }
     }
 }
