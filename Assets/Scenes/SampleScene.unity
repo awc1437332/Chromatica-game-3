@@ -50640,7 +50640,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 4.9
+  m_Intensity: 5
   m_Range: 23.65
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -50717,6 +50717,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  chaseIntensity: 1
+  offPeriod: 1
+  intensifyFactor: 0.0125
+  intensifyInterval: 0.01
 --- !u!1001 &1559030960
 PrefabInstance:
   m_ObjectHideFlags: 0
