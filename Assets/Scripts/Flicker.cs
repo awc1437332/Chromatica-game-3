@@ -2,18 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// The states room lighting can be in.
-/// </summary>
-public enum LightStates
-{
-    Normal,
-    Flickering,
-    ChaseStart,
-    ChaseEnd
-}
-
-
 public class Flicker : MonoBehaviour
 {
     /// <summary>
@@ -34,21 +22,9 @@ public class Flicker : MonoBehaviour
     private Light lightSource;
 
     /// <summary>
-    /// Current state of this light source.
+    /// Whether this light source is currently flickering.
     /// </summary>
-    private LightStates state;
-
-    ///// <summary>
-    ///// Duration the light source should flicker for. Used for regular 
-    ///// flickering state.
-    ///// </summary>
-    //public float RegularFlickerDuration { get; set; }
-
-    ///// <summary>
-    ///// Duration the light source should flicker for. Used at the end of the
-    ///// chase sequence.
-    ///// </summary>
-    //public float ChaseEndFlickerDuration { get; set; }
+    private bool isFlickering;
 
     public float CurrentFlickerDuration { get; set; }
 
@@ -100,36 +76,29 @@ public class Flicker : MonoBehaviour
     {
         // Initialise variables and set references.
         lightSource = GetComponent<Light>();
-        state = LightStates.Normal;
+        isFlickering = false;
         defaultIntensity = lightSource.intensity;
     }
 
     // Update is called once per frame
     void Update()
     {
-        switch (state)
+        if (isFlickering)
         {
-            case LightStates.Flickering:
-                if (flickerDurationCounter < CurrentFlickerDuration)
-                {
-                    flickerDurationCounter += Time.deltaTime;
-                    StartCoroutine("FlickerLight");
-                }
-                else
-                {
-                    flickerDurationCounter = 0;
-                    state = LightStates.Normal;
-                    //lightSource.enabled = true;
-                }
-                break;
-            default:
-            //case LightStates.Chase:
-                break;
-            //default:
-            //    lightSource.enabled = true;
-            //    break;
+            // Flicker lights until enough time has passed.
+            if (flickerDurationCounter < CurrentFlickerDuration)
+            {
+                flickerDurationCounter += Time.deltaTime;
+                StartCoroutine("FlickerLight");
+            }
+            else
+            {
+                flickerDurationCounter = 0;
+                isFlickering = false;
+            }
         }
-        
+
+        #region Lighting Testing
         //// Key '1' toggles between Normal and Flickering states.
         //if (Input.GetKeyDown(KeyCode.Alpha1) && State == LightStates.Normal)
         //{
@@ -167,20 +136,30 @@ public class Flicker : MonoBehaviour
 
         //// Continuously flicker the lights if in the associated state.
         //if (State == LightStates.Flickering) StartCoroutine("FlickerLight");
+        #endregion
     }
 
-    public void ChangeStates(LightStates lightState)
+    /// <summary>
+    /// Exposes to external classes a way to change the current state of the 
+    /// light source.
+    /// </summary>
+    /// <param name="lightState">
+    /// State to change to.
+    /// </param>
+    public void ChangeStates(ControllerType lightState)
     {
+        // Play the Chase sequences for lightState ChaseStart/End.
+        // Alter isFlickering for lightState Flicker.
         switch (lightState)
         {
-            case LightStates.ChaseStart:
+            case ControllerType.ChaseStart:
                 StartCoroutine("ChaseLightStart");
                 break;
-            case LightStates.ChaseEnd:
+            case ControllerType.ChaseEnd:
                 StartCoroutine("ChaseLightEnd");
                 break;
-            default:
-                state = lightState;
+            case ControllerType.Flicker:
+                isFlickering = true;
                 break;
         }
     }
@@ -245,12 +224,15 @@ public class Flicker : MonoBehaviour
         // Gradually intensify light source to intensity defaultIntensity.
         while (lightSource.intensity < defaultIntensity)
         {
+            // Randomly flicker the light source.
             if (Random.Range(0.0f, 1.0f) < 0.1f) StartCoroutine("FlickerLight");
+
             lightSource.intensity += intensifyFactor;
             yield return new WaitForSeconds(intensifyInterval);
         }
 
+        // Flicker lights for a short while they return to full intensity.
         yield return new WaitForSeconds(chaseEndOffPeriod);
-        state = LightStates.Flickering;
+        isFlickering = true;
     }
 }
