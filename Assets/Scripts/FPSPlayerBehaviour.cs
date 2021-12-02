@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FPSPlayerBehaviour : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class FPSPlayerBehaviour : MonoBehaviour
         keyCount = 0;
         reticleScript = GetComponent<ReticleRaycast>();
 
+        GameObject uICanvas = GameObject.Find("UI/Canvas");
+        uICanvas.GetComponent<Canvas>().worldCamera = gameObject.transform.Find("FirstPersonCharacter").GetComponent<Camera>();
+        
         //reticle = GameObject.FindGameObjectWithTag("FPSController").GetComponent<ReticleRaycast>();
     }
 
@@ -25,7 +29,11 @@ public class FPSPlayerBehaviour : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
-            reticleScript.Cast();
+            reticleScript.Cast(true);
+        }
+        else
+        {
+            reticleScript.Cast(false);
         }
     }
 

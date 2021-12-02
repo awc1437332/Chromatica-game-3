@@ -39802,6 +39802,7 @@ MonoBehaviour:
   playerObject: {fileID: 9120010053178307932, guid: a5a47c3e7b75e1843a55c8903845ca02,
     type: 3}
   monsterObject: {fileID: 1215623487}
+  uIManager: {fileID: 0}
 --- !u!4 &1896415450
 Transform:
   m_ObjectHideFlags: 0
@@ -45125,6 +45126,14 @@ PrefabInstance:
       propertyPath: reticle
       value: 
       objectReference: {fileID: 1452976131}
+    - target: {fileID: 235173912, guid: a5a47c3e7b75e1843a55c8903845ca02, type: 3}
+      propertyPath: UIManager
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 235173912, guid: a5a47c3e7b75e1843a55c8903845ca02, type: 3}
+      propertyPath: maxDistance
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 9120010053177878908, guid: a5a47c3e7b75e1843a55c8903845ca02,
         type: 3}
       propertyPath: m_LocalPosition.x

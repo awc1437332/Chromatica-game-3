@@ -19,11 +19,15 @@ public class RoomManager : MonoBehaviour
     public GameObject monsterObject;
     private AgentMovement monster;
 
+    [SerializeField] public UIManager uIManager;
+
     // Start is called before the first frame update
     void Start()
     {
         currentType = RoomType.Puzzle;
         //player = playerObject.GetComponent<Player>();
+
+        uIManager.SetObjectiveText(currentType);
 
         monster = monsterObject.GetComponent<AgentMovement>();
     }
@@ -55,6 +59,8 @@ public class RoomManager : MonoBehaviour
 
             //Adjust Atmosphere
         }
+
+        uIManager.SetObjectiveText(currentType);
     }
 
     //Instantiates a player inside of a new room
