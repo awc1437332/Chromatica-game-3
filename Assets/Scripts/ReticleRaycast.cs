@@ -6,6 +6,11 @@ using UnityEngine.UI;
 public class ReticleRaycast : MonoBehaviour
 {
     /// <summary>
+    /// UI Manager Script.
+    /// </summary>
+    [SerializeField] private UIManager uIManager;
+
+    /// <summary>
     /// Reticle image asset.
     /// </summary>
     [SerializeField]
@@ -62,6 +67,9 @@ public class ReticleRaycast : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Initializes the UIManager script
+        uIManager = GameObject.Find("UIManager").GetComponent<UIManager>();
+
         reticle = GameObject.Find("Canvas").transform.Find("Reticle").GetComponent<Image>();
 
         // Raycast from the centre of the screen, accounting for the reticle's
@@ -89,7 +97,7 @@ public class ReticleRaycast : MonoBehaviour
         
     }
 
-    public void Cast()
+    public void Cast(bool isEnabled)
     {
         // Draw a ray for debugging purposes.
         //Debug.DrawRay(
@@ -111,17 +119,33 @@ public class ReticleRaycast : MonoBehaviour
         // to the console.
         if (raycastCollided && hit.transform.CompareTag("Key"))
         {
-            Debug.Log("Found key");
+            if (isEnabled)
+            {
+                Debug.Log("Found key");
 
-            Destroy(hit.transform.gameObject);
+                Destroy(hit.transform.gameObject);
 
-            GameObject.Find("FPSController").GetComponent<FPSPlayerBehaviour>().keyCount++;
+                GameObject.Find("FPSController").GetComponent<FPSPlayerBehaviour>().keyCount++;
+            }
+            else
+            {
+                uIManager.SetReticleText("Key");
+            }
         }
-
-
-        if (raycastCollided && hit.transform.CompareTag("Door"))
+        else if (raycastCollided && hit.transform.CompareTag("Door"))
         {
-            hit.transform.gameObject.GetComponent<Room>().Activate();
+            if (isEnabled)
+            {
+                hit.transform.gameObject.GetComponent<Room>().Activate();
+            }
+            else
+            {
+                uIManager.SetReticleText("Door");
+            }
+        }
+        else
+        {
+            uIManager.SetReticleText("");
         }
     }
 }
