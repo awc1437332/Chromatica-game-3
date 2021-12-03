@@ -799,6 +799,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -2328,7 +2329,7 @@ GameObject:
   m_Component:
   - component: {fileID: 41196047}
   m_Layer: 0
-  m_Name: Room One Lighting
+  m_Name: Puzzle 1 Lighting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2901,6 +2902,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -4368,6 +4370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -4940,6 +4943,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -5537,6 +5541,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -5833,6 +5838,119 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 120310213}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &122765815
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 122765816}
+  - component: {fileID: 122765818}
+  - component: {fileID: 122765817}
+  m_Layer: 0
+  m_Name: Point Light (13)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &122765816
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122765815}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 18.24, y: -9.965788, z: -15.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 714295212}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &122765817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122765815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af60b27330fffcc4ea179e44143229c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minFlickerSpeed: 0.5
+  maxFlickerSpeed: 2.5
+  isFlickeringPermanently: 0
+  chaseIntensity: 1
+  chaseStartOffPeriod: 1
+  chaseEndOffPeriod: 0.5
+  intensifyFactor: 0.0125
+  intensifyInterval: 0.01
+--- !u!108 &122765818
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122765815}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 5
+  m_Range: 12.5
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1001 &123003866
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6901,6 +7019,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -7088,7 +7207,7 @@ GameObject:
   m_Component:
   - component: {fileID: 163807038}
   m_Layer: 0
-  m_Name: Room Four Walls
+  m_Name: Puzzle 3 Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7970,6 +8089,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -9827,6 +9947,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -9953,7 +10074,7 @@ GameObject:
   m_Component:
   - component: {fileID: 207055230}
   m_Layer: 0
-  m_Name: Room One Walls
+  m_Name: Puzzle 1 Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10035,6 +10156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -10573,6 +10695,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -11590,6 +11713,7 @@ MonoBehaviour:
   - {fileID: 891651777}
   type: 0
   flickerDuration: 2
+  finalIntensity: 0
 --- !u!65 &242414261
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12979,6 +13103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -13099,7 +13224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 273756896}
   m_Layer: 0
-  m_Name: Room Two Lighting
+  m_Name: Puzzle 2 Lighting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15343,6 +15468,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -15976,6 +16102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -17016,6 +17143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -17919,6 +18047,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -18238,6 +18367,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -18555,6 +18685,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -19090,6 +19221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -19249,6 +19381,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -19673,6 +19806,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -20137,8 +20271,9 @@ MonoBehaviour:
   - {fileID: 209635977}
   - {fileID: 1560056941}
   - {fileID: 380793513}
-  type: 2
+  type: 3
   flickerDuration: 1
+  finalIntensity: 1.25
 --- !u!65 &418017296
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21144,6 +21279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -21618,6 +21754,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -22542,6 +22679,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -22672,6 +22810,119 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 463597514}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &463625408
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 463625409}
+  - component: {fileID: 463625411}
+  - component: {fileID: 463625410}
+  m_Layer: 0
+  m_Name: Point Light (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &463625409
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463625408}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.76, y: -9.965788, z: -3.1965027}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 714295212}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &463625410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463625408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af60b27330fffcc4ea179e44143229c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minFlickerSpeed: 0.5
+  maxFlickerSpeed: 2.5
+  isFlickeringPermanently: 0
+  chaseIntensity: 1
+  chaseStartOffPeriod: 1
+  chaseEndOffPeriod: 0.5
+  intensifyFactor: 0.0125
+  intensifyInterval: 0.01
+--- !u!108 &463625411
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463625408}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 5
+  m_Range: 12.5
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1001 &465584301
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23140,6 +23391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -23776,8 +24028,9 @@ MonoBehaviour:
   - {fileID: 1929228461}
   - {fileID: 1822634409}
   - {fileID: 1962793751}
-  type: 2
+  type: 3
   flickerDuration: 0
+  finalIntensity: 5
 --- !u!65 &487254241
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24196,6 +24449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -24862,7 +25116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 512583194}
   m_Layer: 0
-  m_Name: Room Two Objects
+  m_Name: Puzzle 2 Objects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25842,6 +26096,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -25946,6 +26201,119 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 530524352}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &531509791
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 531509792}
+  - component: {fileID: 531509794}
+  - component: {fileID: 531509793}
+  m_Layer: 0
+  m_Name: Point Light (18)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &531509792
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531509791}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 29.74, y: -9.965788, z: -39.23}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 714295212}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &531509793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531509791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af60b27330fffcc4ea179e44143229c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minFlickerSpeed: 0.5
+  maxFlickerSpeed: 2.5
+  isFlickeringPermanently: 0
+  chaseIntensity: 1
+  chaseStartOffPeriod: 1
+  chaseEndOffPeriod: 0.5
+  intensifyFactor: 0.0125
+  intensifyInterval: 0.01
+--- !u!108 &531509794
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531509791}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 5
+  m_Range: 12.5
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1001 &534124092
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26514,6 +26882,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -27092,6 +27461,119 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 573895884}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &574130415
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 574130416}
+  - component: {fileID: 574130418}
+  - component: {fileID: 574130417}
+  m_Layer: 0
+  m_Name: Point Light (8)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &574130416
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574130415}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 29.2, y: -9.965788, z: 8.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 714295212}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &574130417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574130415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af60b27330fffcc4ea179e44143229c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minFlickerSpeed: 0.5
+  maxFlickerSpeed: 2.5
+  isFlickeringPermanently: 0
+  chaseIntensity: 1
+  chaseStartOffPeriod: 1
+  chaseEndOffPeriod: 0.5
+  intensifyFactor: 0.0125
+  intensifyInterval: 0.01
+--- !u!108 &574130418
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574130415}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 5
+  m_Range: 12.5
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1001 &580341498
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28121,6 +28603,119 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfcf2ff11353ee042872cf156b67cb65, type: 3}
+--- !u!1 &596789000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 596789001}
+  - component: {fileID: 596789003}
+  - component: {fileID: 596789002}
+  m_Layer: 0
+  m_Name: Point Light (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &596789001
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596789000}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 18.43, y: -9.965788, z: 8.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 714295212}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &596789002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596789000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af60b27330fffcc4ea179e44143229c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minFlickerSpeed: 0.5
+  maxFlickerSpeed: 2.5
+  isFlickeringPermanently: 0
+  chaseIntensity: 1
+  chaseStartOffPeriod: 1
+  chaseEndOffPeriod: 0.5
+  intensifyFactor: 0.0125
+  intensifyInterval: 0.01
+--- !u!108 &596789003
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596789000}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 5
+  m_Range: 12.5
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!4 &597755230 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 019714739cb6756499b2a74cb1a1b00b,
@@ -28341,6 +28936,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -28600,6 +29196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -30052,7 +30649,7 @@ GameObject:
   m_Component:
   - component: {fileID: 636387271}
   m_Layer: 0
-  m_Name: Room Three Walls
+  m_Name: Chase 1 Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30199,6 +30796,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -30576,6 +31174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -33184,6 +33783,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -33441,6 +34041,55 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 713643301}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &714295211
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 714295212}
+  m_Layer: 0
+  m_Name: Puzzle 3 Lighting
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &714295212
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714295211}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1176955445}
+  - {fileID: 463625409}
+  - {fileID: 1290589967}
+  - {fileID: 596789001}
+  - {fileID: 1078300659}
+  - {fileID: 1788504525}
+  - {fileID: 1929199383}
+  - {fileID: 1704649805}
+  - {fileID: 574130416}
+  - {fileID: 1232361524}
+  - {fileID: 1509162490}
+  - {fileID: 1899388577}
+  - {fileID: 874015640}
+  - {fileID: 122765816}
+  - {fileID: 1583125638}
+  - {fileID: 929723221}
+  - {fileID: 1195167225}
+  - {fileID: 1725257586}
+  - {fileID: 531509792}
+  m_Father: {fileID: 1335523497}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &716389789 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 019714739cb6756499b2a74cb1a1b00b,
@@ -35347,7 +35996,7 @@ GameObject:
   m_Component:
   - component: {fileID: 789619599}
   m_Layer: 0
-  m_Name: Room Six Lighting
+  m_Name: Chase 2 Lighting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36271,6 +36920,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -38597,7 +39247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 863052503}
   m_Layer: 0
-  m_Name: Room Four Objects
+  m_Name: Puzzle 3 Objects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39264,6 +39914,119 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 872964340}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &874015639
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 874015640}
+  - component: {fileID: 874015642}
+  - component: {fileID: 874015641}
+  m_Layer: 0
+  m_Name: Point Light (12)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &874015640
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874015639}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 52.3, y: -9.965788, z: -15.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 714295212}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &874015641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874015639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af60b27330fffcc4ea179e44143229c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minFlickerSpeed: 0.5
+  maxFlickerSpeed: 2.5
+  isFlickeringPermanently: 1
+  chaseIntensity: 1
+  chaseStartOffPeriod: 1
+  chaseEndOffPeriod: 0.5
+  intensifyFactor: 0.0125
+  intensifyInterval: 0.01
+--- !u!108 &874015642
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874015639}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 5
+  m_Range: 12.5
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1001 &874206743
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39535,7 +40298,7 @@ GameObject:
   m_Component:
   - component: {fileID: 880728921}
   m_Layer: 0
-  m_Name: Room Three Objects
+  m_Name: Chase 1 Objects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40374,6 +41137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -41554,6 +42318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -41783,7 +42548,7 @@ GameObject:
   m_Component:
   - component: {fileID: 927457009}
   m_Layer: 0
-  m_Name: Room Five Lighting
+  m_Name: Puzzle 4 Lighting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41904,6 +42669,119 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 929211254}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &929723220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 929723221}
+  - component: {fileID: 929723223}
+  - component: {fileID: 929723222}
+  m_Layer: 0
+  m_Name: Point Light (15)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &929723221
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929723220}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 29.74, y: -9.965788, z: -25.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 714295212}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &929723222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929723220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af60b27330fffcc4ea179e44143229c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minFlickerSpeed: 0.5
+  maxFlickerSpeed: 2.5
+  isFlickeringPermanently: 1
+  chaseIntensity: 1
+  chaseStartOffPeriod: 1
+  chaseEndOffPeriod: 0.5
+  intensifyFactor: 0.0125
+  intensifyInterval: 0.01
+--- !u!108 &929723223
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929723220}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 5
+  m_Range: 12.5
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &930003741 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 019714739cb6756499b2a74cb1a1b00b,
@@ -43896,6 +44774,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -45591,7 +46470,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1007924344}
   m_Layer: 0
-  m_Name: Room Two Walls
+  m_Name: Puzzle 2 Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46784,7 +47663,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1036674599}
   m_Layer: 0
-  m_Name: Room Five Objects
+  m_Name: Puzzle 4 Objects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47301,6 +48180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -48357,6 +49237,119 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1077681570}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1078300658
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1078300659}
+  - component: {fileID: 1078300661}
+  - component: {fileID: 1078300660}
+  m_Layer: 0
+  m_Name: Point Light (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1078300659
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078300658}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 18.43, y: -9.965788, z: 19.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 714295212}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1078300660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078300658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af60b27330fffcc4ea179e44143229c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minFlickerSpeed: 0.5
+  maxFlickerSpeed: 2.5
+  isFlickeringPermanently: 0
+  chaseIntensity: 1
+  chaseStartOffPeriod: 1
+  chaseEndOffPeriod: 0.5
+  intensifyFactor: 0.0125
+  intensifyInterval: 0.01
+--- !u!108 &1078300661
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078300658}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 5
+  m_Range: 12.5
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1001 &1079632499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48704,6 +49697,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -50648,6 +51642,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -50779,8 +51774,9 @@ MonoBehaviour:
   - {fileID: 1929228461}
   - {fileID: 1822634409}
   - {fileID: 1962793751}
-  type: 1
+  type: 2
   flickerDuration: 0
+  finalIntensity: 0
 --- !u!65 &1126915515
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -52727,6 +53723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -52958,6 +53955,119 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1176952444}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1176955444
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1176955445}
+  - component: {fileID: 1176955447}
+  - component: {fileID: 1176955446}
+  m_Layer: 0
+  m_Name: Point Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1176955445
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176955444}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.6000023, y: -9.965788, z: -3.1965027}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 714295212}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1176955446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176955444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af60b27330fffcc4ea179e44143229c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minFlickerSpeed: 0.5
+  maxFlickerSpeed: 2.5
+  isFlickeringPermanently: 0
+  chaseIntensity: 1
+  chaseStartOffPeriod: 1
+  chaseEndOffPeriod: 0.5
+  intensifyFactor: 0.0125
+  intensifyInterval: 0.01
+--- !u!108 &1176955447
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176955444}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 5
+  m_Range: 12.5
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &1178337113 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 019714739cb6756499b2a74cb1a1b00b,
@@ -54421,6 +55531,119 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1194990351}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1195167224
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1195167225}
+  - component: {fileID: 1195167227}
+  - component: {fileID: 1195167226}
+  m_Layer: 0
+  m_Name: Point Light (16)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1195167225
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195167224}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 42.41, y: -9.965788, z: -39.02}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 714295212}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1195167226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195167224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af60b27330fffcc4ea179e44143229c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minFlickerSpeed: 0.5
+  maxFlickerSpeed: 2.5
+  isFlickeringPermanently: 1
+  chaseIntensity: 1
+  chaseStartOffPeriod: 1
+  chaseEndOffPeriod: 0.5
+  intensifyFactor: 0.0125
+  intensifyInterval: 0.01
+--- !u!108 &1195167227
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195167224}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 5
+  m_Range: 12.5
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &1195462711 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 019714739cb6756499b2a74cb1a1b00b,
@@ -55082,6 +56305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -55988,6 +57212,119 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1232020468}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1232361523
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1232361524}
+  - component: {fileID: 1232361526}
+  - component: {fileID: 1232361525}
+  m_Layer: 0
+  m_Name: Point Light (9)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1232361524
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232361523}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 40, y: -9.965788, z: 8.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 714295212}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1232361525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232361523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af60b27330fffcc4ea179e44143229c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minFlickerSpeed: 0.5
+  maxFlickerSpeed: 2.5
+  isFlickeringPermanently: 0
+  chaseIntensity: 1
+  chaseStartOffPeriod: 1
+  chaseEndOffPeriod: 0.5
+  intensifyFactor: 0.0125
+  intensifyInterval: 0.01
+--- !u!108 &1232361526
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232361523}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 5
+  m_Range: 12.5
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1001 &1232885236
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56751,7 +58088,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1254592842}
   m_Layer: 0
-  m_Name: Room Six Objects
+  m_Name: Chase 2 Objects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58619,6 +59956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -59084,6 +60422,119 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 768605818312113272, guid: 019714739cb6756499b2a74cb1a1b00b, type: 3}
+--- !u!1 &1290589966
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1290589967}
+  - component: {fileID: 1290589969}
+  - component: {fileID: 1290589968}
+  m_Layer: 0
+  m_Name: Point Light (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1290589967
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290589966}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 18.43, y: -9.965788, z: -3.1965027}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 714295212}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1290589968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290589966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af60b27330fffcc4ea179e44143229c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minFlickerSpeed: 0.5
+  maxFlickerSpeed: 2.5
+  isFlickeringPermanently: 1
+  chaseIntensity: 1
+  chaseStartOffPeriod: 1
+  chaseEndOffPeriod: 0.5
+  intensifyFactor: 0.0125
+  intensifyInterval: 0.01
+--- !u!108 &1290589969
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290589966}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 5
+  m_Range: 12.5
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &1291937846 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 019714739cb6756499b2a74cb1a1b00b,
@@ -59567,6 +61018,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -59909,6 +61361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -60660,6 +62113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -60756,7 +62210,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1335523497}
   m_Layer: 0
-  m_Name: Puzzle 3 lighting needed
+  m_Name: Puzzle 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60775,6 +62229,8 @@ Transform:
   m_Children:
   - {fileID: 163807038}
   - {fileID: 863052503}
+  - {fileID: 2000794622}
+  - {fileID: 714295212}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -62431,6 +63887,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -63407,6 +64864,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -63948,6 +65406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -65033,6 +66492,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -65526,7 +66986,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1434041825}
   m_Layer: 0
-  m_Name: Room Six Walls
+  m_Name: Chase 2 Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68022,6 +69482,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -68497,6 +69958,119 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1508377796}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1509162489
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1509162490}
+  - component: {fileID: 1509162492}
+  - component: {fileID: 1509162491}
+  m_Layer: 0
+  m_Name: Point Light (10)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1509162490
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509162489}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 52.3, y: -9.965788, z: 8.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 714295212}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1509162491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509162489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af60b27330fffcc4ea179e44143229c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minFlickerSpeed: 0.5
+  maxFlickerSpeed: 2.5
+  isFlickeringPermanently: 0
+  chaseIntensity: 1
+  chaseStartOffPeriod: 1
+  chaseEndOffPeriod: 0.5
+  intensifyFactor: 0.0125
+  intensifyInterval: 0.01
+--- !u!108 &1509162492
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509162489}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 5
+  m_Range: 12.5
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &1509646127 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 019714739cb6756499b2a74cb1a1b00b,
@@ -69706,6 +71280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -69954,6 +71529,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -70297,6 +71873,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -70859,6 +72436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -70957,6 +72535,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -71107,6 +72686,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -71983,6 +73563,119 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 482af5e7aa6bd9f47aa896e072086944, type: 3}
+--- !u!1 &1583125637
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1583125638}
+  - component: {fileID: 1583125640}
+  - component: {fileID: 1583125639}
+  m_Layer: 0
+  m_Name: Point Light (14)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1583125638
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583125637}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 18.24, y: -9.965788, z: -27.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 714295212}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1583125639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583125637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af60b27330fffcc4ea179e44143229c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minFlickerSpeed: 0.5
+  maxFlickerSpeed: 2.5
+  isFlickeringPermanently: 0
+  chaseIntensity: 1
+  chaseStartOffPeriod: 1
+  chaseEndOffPeriod: 0.5
+  intensifyFactor: 0.0125
+  intensifyInterval: 0.01
+--- !u!108 &1583125640
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583125637}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 5
+  m_Range: 12.5
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1001 &1589595367
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72821,6 +74514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -74656,6 +76350,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -74904,6 +76599,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -75210,6 +76906,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -76428,6 +78125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -76736,6 +78434,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -77692,6 +79391,119 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1703926670}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1704649804
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1704649805}
+  - component: {fileID: 1704649807}
+  - component: {fileID: 1704649806}
+  m_Layer: 0
+  m_Name: Point Light (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1704649805
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704649804}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 29.2, y: -9.965788, z: 19.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 714295212}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1704649806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704649804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af60b27330fffcc4ea179e44143229c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minFlickerSpeed: 0.5
+  maxFlickerSpeed: 2.5
+  isFlickeringPermanently: 1
+  chaseIntensity: 1
+  chaseStartOffPeriod: 1
+  chaseEndOffPeriod: 0.5
+  intensifyFactor: 0.0125
+  intensifyInterval: 0.01
+--- !u!108 &1704649807
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704649804}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 5
+  m_Range: 12.5
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1001 &1706079811
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -78654,6 +80466,119 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -8933759927934725312, guid: dfcf2ff11353ee042872cf156b67cb65, type: 3}
+--- !u!1 &1725257585
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1725257586}
+  - component: {fileID: 1725257588}
+  - component: {fileID: 1725257587}
+  m_Layer: 0
+  m_Name: Point Light (17)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1725257586
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725257585}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 42.41, y: -9.965788, z: -25.91}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 714295212}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1725257587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725257585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af60b27330fffcc4ea179e44143229c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minFlickerSpeed: 0.5
+  maxFlickerSpeed: 2.5
+  isFlickeringPermanently: 0
+  chaseIntensity: 1
+  chaseStartOffPeriod: 1
+  chaseEndOffPeriod: 0.5
+  intensifyFactor: 0.0125
+  intensifyInterval: 0.01
+--- !u!108 &1725257588
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725257585}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 5
+  m_Range: 12.5
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1001 &1725716137
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -79436,6 +81361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -81106,7 +83032,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1784618309}
   m_Layer: 0
-  m_Name: Room One Objects
+  m_Name: Puzzle 1 Objects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81315,6 +83241,119 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 482af5e7aa6bd9f47aa896e072086944, type: 3}
+--- !u!1 &1788504524
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1788504525}
+  - component: {fileID: 1788504527}
+  - component: {fileID: 1788504526}
+  m_Layer: 0
+  m_Name: Point Light (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1788504525
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788504524}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 18.43, y: -9.965788, z: 31.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 714295212}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1788504526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788504524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af60b27330fffcc4ea179e44143229c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minFlickerSpeed: 0.5
+  maxFlickerSpeed: 2.5
+  isFlickeringPermanently: 0
+  chaseIntensity: 1
+  chaseStartOffPeriod: 1
+  chaseEndOffPeriod: 0.5
+  intensifyFactor: 0.0125
+  intensifyInterval: 0.01
+--- !u!108 &1788504527
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788504524}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 5
+  m_Range: 12.5
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1001 &1788619493
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -82747,6 +84786,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -84987,7 +87027,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1854895827}
   m_Layer: 0
-  m_Name: Room Five Walls
+  m_Name: Puzzle 4 Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85438,6 +87478,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -86989,6 +89030,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -87186,6 +89228,119 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1899388576
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1899388577}
+  - component: {fileID: 1899388579}
+  - component: {fileID: 1899388578}
+  m_Layer: 0
+  m_Name: Point Light (11)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1899388577
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899388576}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 52.3, y: -9.965788, z: -4.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 714295212}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1899388578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899388576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af60b27330fffcc4ea179e44143229c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minFlickerSpeed: 0.5
+  maxFlickerSpeed: 2.5
+  isFlickeringPermanently: 0
+  chaseIntensity: 1
+  chaseStartOffPeriod: 1
+  chaseEndOffPeriod: 0.5
+  intensifyFactor: 0.0125
+  intensifyInterval: 0.01
+--- !u!108 &1899388579
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899388576}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 5
+  m_Range: 12.5
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1001 &1902389923
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -87340,8 +89495,9 @@ MonoBehaviour:
   - {fileID: 209635977}
   - {fileID: 1560056941}
   - {fileID: 380793513}
-  type: 1
+  type: 2
   flickerDuration: 0
+  finalIntensity: 0
 --- !u!65 &1902458608
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -88151,6 +90307,7 @@ MonoBehaviour:
   - {fileID: 641470886}
   type: 0
   flickerDuration: 2
+  finalIntensity: 0
 --- !u!65 &1923267682
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -88292,6 +90449,119 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1927448331}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1929199382
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1929199383}
+  - component: {fileID: 1929199385}
+  - component: {fileID: 1929199384}
+  m_Layer: 0
+  m_Name: Point Light (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1929199383
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929199382}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 29.1, y: -9.965788, z: 31.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 714295212}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1929199384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929199382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af60b27330fffcc4ea179e44143229c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minFlickerSpeed: 0.5
+  maxFlickerSpeed: 2.5
+  isFlickeringPermanently: 1
+  chaseIntensity: 1
+  chaseStartOffPeriod: 1
+  chaseEndOffPeriod: 0.5
+  intensifyFactor: 0.0125
+  intensifyInterval: 0.01
+--- !u!108 &1929199385
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929199382}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 5
+  m_Range: 12.5
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &1929228458
 GameObject:
   m_ObjectHideFlags: 0
@@ -88338,6 +90608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -88450,6 +90721,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -89961,6 +92233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -91459,6 +93732,99 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 92294822}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2000794621
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2000794622}
+  - component: {fileID: 2000794625}
+  - component: {fileID: 2000794624}
+  - component: {fileID: 2000794623}
+  m_Layer: 0
+  m_Name: Roof
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2000794622
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000794621}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 23.7, y: -6.2340837, z: -2.300003}
+  m_LocalScale: {x: 72.720474, y: 1, z: 86.00417}
+  m_Children: []
+  m_Father: {fileID: 1335523497}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2000794623
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000794621}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &2000794624
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000794621}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &2000794625
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000794621}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &2001260722
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -91967,7 +94333,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2009437332}
   m_Layer: 0
-  m_Name: Room Three Lighting
+  m_Name: Chase 1 Lighting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -92306,6 +94672,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -93935,6 +96302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -95546,6 +97914,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -97735,6 +100104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFlickerSpeed: 0.1
   maxFlickerSpeed: 1
+  isFlickeringPermanently: 0
   chaseIntensity: 1
   chaseStartOffPeriod: 1
   chaseEndOffPeriod: 0.5
@@ -98795,7 +101165,7 @@ PrefabInstance:
     - target: {fileID: 9120010053177878908, guid: a5a47c3e7b75e1843a55c8903845ca02,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -56.7
+      value: -53.3
       objectReference: {fileID: 0}
     - target: {fileID: 9120010053177878908, guid: a5a47c3e7b75e1843a55c8903845ca02,
         type: 3}
@@ -98805,7 +101175,7 @@ PrefabInstance:
     - target: {fileID: 9120010053177878908, guid: a5a47c3e7b75e1843a55c8903845ca02,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -19.4
+      value: -138.4
       objectReference: {fileID: 0}
     - target: {fileID: 9120010053177878908, guid: a5a47c3e7b75e1843a55c8903845ca02,
         type: 3}

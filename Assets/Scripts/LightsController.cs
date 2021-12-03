@@ -5,6 +5,7 @@ using UnityEngine;
 public enum ControllerType
 {
     Flicker,
+    IntermittentFlicker,
     ChaseStart,
     ChaseEnd
 }
@@ -40,6 +41,12 @@ public class LightsController : MonoBehaviour
     [SerializeField]
     private float flickerDuration;
 
+    /// <summary>
+    /// Intensity of light source when power is restored.
+    /// </summary>
+    [SerializeField]
+    private float finalIntensity;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,7 +60,19 @@ public class LightsController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (type == ControllerType.IntermittentFlicker)
+        {
+            float random = Random.Range(0.0f, 1.0f);
+            if (random < 0.0005f)
+            {
+                Debug.Log("flicker everything!");
+                foreach (Flicker lightSource in lightScripts)
+                {
+                    lightSource.ChangeStates(ControllerType.IntermittentFlicker);
+                    lightSource.CurrentFlickerDuration = flickerDuration;
+                }
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -74,6 +93,9 @@ public class LightsController : MonoBehaviour
                         lightSource.CurrentFlickerDuration = flickerDuration;
                     }
                     break;
+                case ControllerType.IntermittentFlicker:
+                    
+                    break;
                 case ControllerType.ChaseStart:
                     foreach (Flicker lightSource in lightScripts)
                         lightSource.ChangeStates(ControllerType.ChaseStart);
@@ -83,6 +105,7 @@ public class LightsController : MonoBehaviour
                     {
                         lightSource.ChangeStates(ControllerType.ChaseEnd);
                         lightSource.CurrentFlickerDuration = flickerDuration;
+                        lightSource.FinalIntensity = finalIntensity;
                     }
                     break;
             }

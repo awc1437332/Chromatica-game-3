@@ -26,6 +26,17 @@ public class Flicker : MonoBehaviour
     /// </summary>
     private bool isFlickering;
 
+    /// <summary>
+    /// Determines whether the light source is flickering permanently.
+    /// </summary>
+    [SerializeField]
+    private bool isFlickeringPermanently;
+
+    /// <summary>
+    /// Determines whether the light source is flickering intermittently.
+    /// </summary>
+    private bool isFlickeringIntermittently;
+
     public float CurrentFlickerDuration { get; set; }
 
     /// <summary>
@@ -34,9 +45,9 @@ public class Flicker : MonoBehaviour
     private float flickerDurationCounter;
 
     /// <summary>
-    /// The initial intensity of the light source when the scene is loaded.
+    /// Intensity of light source when power is restored.
     /// </summary>
-    private float defaultIntensity;
+    public float FinalIntensity { get; set; }
 
     /// <summary>
     /// Intensity of the light source when in a Chase state.
@@ -77,12 +88,18 @@ public class Flicker : MonoBehaviour
         // Initialise variables and set references.
         lightSource = GetComponent<Light>();
         isFlickering = false;
-        defaultIntensity = lightSource.intensity;
+        FinalIntensity = lightSource.intensity;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (isFlickeringPermanently)
+            //StartCoroutine("FlickerLight");
+            if (Random.Range(0.0f, 1.0f) < 0.025f) StartCoroutine("FlickerLight");
+        else if (isFlickeringIntermittently)
+            // Randomly flicker the light source.
+            if (Random.Range(0.0f, 1.0f) < 0.1f) StartCoroutine("FlickerLight");
         if (isFlickering)
         {
             // Flicker lights until enough time has passed.
@@ -161,6 +178,9 @@ public class Flicker : MonoBehaviour
             case ControllerType.Flicker:
                 isFlickering = true;
                 break;
+            case ControllerType.IntermittentFlicker:
+                if (!isFlickeringPermanently) isFlickeringIntermittently = true;
+                break;
         }
     }
 
@@ -222,7 +242,7 @@ public class Flicker : MonoBehaviour
         lightSource.color = new Color(1.0f, 1.0f, 1.0f);
 
         // Gradually intensify light source to intensity defaultIntensity.
-        while (lightSource.intensity < defaultIntensity)
+        while (lightSource.intensity < FinalIntensity)
         {
             // Randomly flicker the light source.
             if (Random.Range(0.0f, 1.0f) < 0.1f) StartCoroutine("FlickerLight");
