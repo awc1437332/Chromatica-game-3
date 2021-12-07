@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class SEAudioSource : MonoBehaviour
 {
@@ -62,7 +63,7 @@ public class SEAudioSource : MonoBehaviour
                 break;
             case AudioClips.Warning:
                 audioSource.clip = warning;
-                audioSource.volume = 1;
+                audioSource.volume = 0.5f;
                 audioSource.PlayOneShot(audioSource.clip);
                 Debug.Log("playing warning");
                 break;

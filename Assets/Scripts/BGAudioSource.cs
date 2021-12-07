@@ -10,6 +10,7 @@ public class BGAudioSource : MonoBehaviour
     [SerializeField] private AudioClip puzzle2;
     [SerializeField] private AudioClip chase;
 
+    [SerializeField] private float fadeOutLength;
     private AudioSource audioSource;
 
     // Start is called before the first frame update
@@ -52,19 +53,28 @@ public class BGAudioSource : MonoBehaviour
                 break;
             case AudioClips.Chase:
                 audioSource.clip = chase;
-                audioSource.volume = 0.135f;
+                audioSource.volume = 0.5f;
                 audioSource.Play();
                 Debug.Log("playing chase");
+                break;
+            case AudioClips.Stop:
+                StartCoroutine("FadeOut");
                 break;
         }
     }
 
-    //public void PlayPuzzleSet1()
-    //{
-    //    m_AudioSource.clip = puzzleSet1;
-    //    m_AudioSource.PlayOneShot(m_AudioSource.clip);
-    //    Debug.Log("playing puzzle 1");
-    //}
+    public IEnumerator FadeOut()
+    {
+        Debug.Log("fading out");
+
+        while (audioSource.volume > 0)
+        {
+            audioSource.volume -= 0.01f;
+            yield return new WaitForSeconds(fadeOutLength);
+        }
+        
+        audioSource.Stop();
+    }
 }
 
 

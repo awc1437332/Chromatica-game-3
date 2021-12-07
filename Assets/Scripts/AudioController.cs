@@ -13,7 +13,8 @@ public enum AudioClips
     PowerDown,
     PowerOn,
     LightFlickering,
-    Warning
+    Warning,
+    Stop
 }
 
 public class AudioController : MonoBehaviour
@@ -41,18 +42,23 @@ public class AudioController : MonoBehaviour
         {
             collided = true;
 
-            if (audioClip == AudioClips.Bg
-                || audioClip == AudioClips.Puzzle1
-                || audioClip == AudioClips.Puzzle2
-                || audioClip == AudioClips.Chase)
+            switch (audioClip)
             {
-                playerBGAudioScript = collider.GetComponentInChildren<BGAudioSource>();
-                playerBGAudioScript.PlayAudio(audioClip); 
-            }
-            else
-            {
-                playerSEAudioScript = collider.GetComponentInChildren<SEAudioSource>();
-                playerSEAudioScript.PlayAudio(audioClip);
+                case AudioClips.Bg:
+                case AudioClips.Puzzle1:
+                case AudioClips.Puzzle2:
+                case AudioClips.Chase:
+                    playerBGAudioScript = collider.GetComponentInChildren<BGAudioSource>();
+                    playerBGAudioScript.PlayAudio(audioClip);
+                    break;
+                case AudioClips.Stop:
+                    playerBGAudioScript = collider.GetComponentInChildren<BGAudioSource>();
+                    playerBGAudioScript.PlayAudio(audioClip);
+                    break;
+                default:
+                    playerSEAudioScript = collider.GetComponentInChildren<SEAudioSource>();
+                    playerSEAudioScript.PlayAudio(audioClip);
+                    break;
             }
             //playerScript.PlayPuzzleSet1();
         }

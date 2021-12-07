@@ -393,6 +393,7 @@ GameObject:
   m_Component:
   - component: {fileID: 59370314906959252}
   - component: {fileID: 2971879591386629556}
+  - component: {fileID: 2275656362140901874}
   m_Layer: 0
   m_Name: SE Audio Source
   m_TagString: Untagged
@@ -510,6 +511,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2275656362140901874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212431157221769612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09bc0a13d42d71743ac5159804ff1ca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pipeHiss:
+  - {fileID: 8300000, guid: 2dd45a8205c002a42af13c7e71455b1f, type: 3}
+  - {fileID: 8300000, guid: e828cf2d42c208941aa0dc7b59d99134, type: 3}
+  - {fileID: 8300000, guid: 6117e9760fa16fc478097f14e9de2da3, type: 3}
+  balloonPop: {fileID: 8300000, guid: 15aadf87dc9f04c479d73c3439b707f0, type: 3}
+  powerDown: {fileID: 8300000, guid: 9dd4ea4f8b1f01a4cbb7e6e80b905801, type: 3}
+  powerOn: {fileID: 8300000, guid: ccf2da13463864a4a8a36e2f45ccb43a, type: 3}
+  lightFlickering: {fileID: 8300000, guid: b112eeac32797184cb9fe86dc296302b, type: 3}
+  warning: {fileID: 8300000, guid: 4e698f93ea88cfe4abd9671c863cf882, type: 3}
 --- !u!1 &6654782224398382538
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,6 +542,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2962619635719113607}
   - component: {fileID: 200059610612470275}
+  - component: {fileID: 5066293754039757681}
   m_Layer: 0
   m_Name: BG Audio Source
   m_TagString: Untagged
@@ -637,3 +660,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5066293754039757681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6654782224398382538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 683c79da7711c2b48807a6dc6c6fb826, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bg: {fileID: 8300000, guid: 6c78ece4f403ab54193bf5891e4f4ed7, type: 3}
+  puzzle1: {fileID: 8300000, guid: d2ec22cc6e3932b4288f1aeecf4d4372, type: 3}
+  puzzle2: {fileID: 8300000, guid: 6216a73d3aa06f245b7d7124ff70ac57, type: 3}
+  chase: {fileID: 8300000, guid: 89f25486e169517428c58af32aedc014, type: 3}
+  fadeOutLength: 0.1
