@@ -2,35 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum AudioClips
-{
-    Bg,
-    Puzzle1,
-    Puzzle2,
-    Chase,
-    PipeHiss,
-    BalloonPop,
-    PowerDown,
-    PowerOn,
-    LightFlickering,
-    Warning
-}
-
-public class GameAudioSource : MonoBehaviour
+public class BGAudioSource : MonoBehaviour
 {
     // BG + BGM
     [SerializeField] private AudioClip bg;
     [SerializeField] private AudioClip puzzle1;
     [SerializeField] private AudioClip puzzle2;
     [SerializeField] private AudioClip chase;
-
-    // SE
-    [SerializeField] private AudioClip pipeHiss;
-    [SerializeField] private AudioClip balloonPop;
-    [SerializeField] private AudioClip powerDown;
-    [SerializeField] private AudioClip powerOn;
-    [SerializeField] private AudioClip lightFlickering;
-    [SerializeField] private AudioClip warning;
 
     private AudioSource audioSource;
 
@@ -62,15 +40,21 @@ public class GameAudioSource : MonoBehaviour
                 break;
             case AudioClips.Puzzle1:
                 audioSource.clip = puzzle1;
-                audioSource.volume = 0.75f;
+                audioSource.volume = 0.135f;
                 audioSource.Play();
                 Debug.Log("playing puzzle 1");
                 break;
-            case AudioClips.LightFlickering:
-                audioSource.clip = lightFlickering;
-                audioSource.volume = 1;
-                audioSource.PlayOneShot(audioSource.clip);
-                Debug.Log("playing light flickering");
+            case AudioClips.Puzzle2:
+                audioSource.clip = puzzle2;
+                audioSource.volume = 0.135f;
+                audioSource.Play();
+                Debug.Log("playing puzzle 2");
+                break;
+            case AudioClips.Chase:
+                audioSource.clip = chase;
+                audioSource.volume = 0.135f;
+                audioSource.Play();
+                Debug.Log("playing chase");
                 break;
         }
     }

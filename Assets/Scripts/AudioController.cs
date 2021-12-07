@@ -2,9 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum AudioClips
+{
+    Bg,
+    Puzzle1,
+    Puzzle2,
+    Chase,
+    PipeHiss,
+    BalloonPop,
+    PowerDown,
+    PowerOn,
+    LightFlickering,
+    Warning
+}
+
 public class AudioController : MonoBehaviour
 {
-    private GameAudioSource playerAudioScript;
+    private BGAudioSource playerBGAudioScript;
+    private SEAudioSource playerSEAudioScript;
     private bool collided;
     [SerializeField] private AudioClips audioClip;
 
@@ -26,8 +41,19 @@ public class AudioController : MonoBehaviour
         {
             collided = true;
 
-            playerAudioScript = collider.GetComponentInChildren<GameAudioSource>();
-            playerAudioScript.PlayAudio(audioClip); 
+            if (audioClip == AudioClips.Bg
+                || audioClip == AudioClips.Puzzle1
+                || audioClip == AudioClips.Puzzle2
+                || audioClip == AudioClips.Chase)
+            {
+                playerBGAudioScript = collider.GetComponentInChildren<BGAudioSource>();
+                playerBGAudioScript.PlayAudio(audioClip); 
+            }
+            else
+            {
+                playerSEAudioScript = collider.GetComponentInChildren<SEAudioSource>();
+                playerSEAudioScript.PlayAudio(audioClip);
+            }
             //playerScript.PlayPuzzleSet1();
         }
 
