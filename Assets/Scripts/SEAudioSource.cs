@@ -29,6 +29,9 @@ public class SEAudioSource : MonoBehaviour
 
     public void PlayAudio(AudioClips audio)
     {
+        // Play the audio using its associated script.
+        // Use PlayOneShot() to prevent interference with BG audio, and also
+        // because these effects do not need to be looped.
         switch (audio)
         {
             case AudioClips.PipeHiss:
@@ -69,11 +72,4 @@ public class SEAudioSource : MonoBehaviour
                 break;
         }
     }
-
-    //public void PlayPuzzleSet1()
-    //{
-    //    m_AudioSource.clip = puzzleSet1;
-    //    m_AudioSource.PlayOneShot(m_AudioSource.clip);
-    //    Debug.Log("playing puzzle 1");
-    //}
 }

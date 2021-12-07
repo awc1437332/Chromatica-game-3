@@ -31,6 +31,7 @@ public class BGAudioSource : MonoBehaviour
 
     public void PlayAudio(AudioClips audio)
     {
+        // Play the audio using its associated script.
         switch (audio)
         {
             case AudioClips.Bg:

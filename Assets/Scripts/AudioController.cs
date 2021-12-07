@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// All possible audio clips in the game + stop cue.
 public enum AudioClips
 {
     Bg,
@@ -19,6 +20,7 @@ public enum AudioClips
 
 public class AudioController : MonoBehaviour
 {
+    // References to scripts controlling BG and SE audio.
     private BGAudioSource playerBGAudioScript;
     private SEAudioSource playerSEAudioScript;
     private bool collided;
@@ -38,12 +40,14 @@ public class AudioController : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
+        // Only allow trigger to activate once.
         if (!collided)
         {
             collided = true;
 
             switch (audioClip)
             {
+                // Play the audio using its associated script.
                 case AudioClips.Bg:
                 case AudioClips.Puzzle1:
                 case AudioClips.Puzzle2:
@@ -51,6 +55,7 @@ public class AudioController : MonoBehaviour
                     playerBGAudioScript = collider.GetComponentInChildren<BGAudioSource>();
                     playerBGAudioScript.PlayAudio(audioClip);
                     break;
+                // Stop cue received. Fade out in playerBGAudioScript.
                 case AudioClips.Stop:
                     playerBGAudioScript = collider.GetComponentInChildren<BGAudioSource>();
                     playerBGAudioScript.PlayAudio(audioClip);
@@ -60,12 +65,6 @@ public class AudioController : MonoBehaviour
                     playerSEAudioScript.PlayAudio(audioClip);
                     break;
             }
-            //playerScript.PlayPuzzleSet1();
         }
-
-        //if (collider.CompareTag("Player"))
-        //{
-
-        //}
     }
 }
