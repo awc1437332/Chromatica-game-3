@@ -97,9 +97,9 @@ public class Flicker : MonoBehaviour
         if (isFlickeringPermanently)
             //StartCoroutine("FlickerLight");
             if (Random.Range(0.0f, 1.0f) < 0.025f) StartCoroutine("FlickerLight");
-        else if (isFlickeringIntermittently)
-            // Randomly flicker the light source.
-            if (Random.Range(0.0f, 1.0f) < 0.1f) StartCoroutine("FlickerLight");
+        //else if (isFlickeringIntermittently)
+        //    // Randomly flicker the light source.
+        //    if (Random.Range(0.0f, 1.0f) < 0.1f) StartCoroutine("FlickerLight");
         if (isFlickering)
         {
             // Flicker lights until enough time has passed.
@@ -179,7 +179,7 @@ public class Flicker : MonoBehaviour
                 isFlickering = true;
                 break;
             case ControllerType.IntermittentFlicker:
-                if (!isFlickeringPermanently) isFlickeringIntermittently = true;
+                if (!isFlickeringPermanently) isFlickering = true;
                 break;
         }
     }
