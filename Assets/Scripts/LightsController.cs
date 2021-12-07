@@ -30,6 +30,11 @@ public class LightsController : MonoBehaviour
     private Flicker[] lightScripts;
 
     /// <summary>
+    /// References each light's Audio Source component.
+    /// </summary>
+    private AudioSource[] lightAudio;
+
+    /// <summary>
     /// Type of effect this controller has on affected lights when triggered.
     /// </summary>
     [SerializeField]
@@ -53,8 +58,12 @@ public class LightsController : MonoBehaviour
         // Initialise variables and set references.
         collided = false;
         lightScripts = new Flicker[lights.Length];
+        lightAudio = new AudioSource[lights.Length];
         for (int i = 0; i < lightScripts.Length; i++)
+        {
             lightScripts[i] = lights[i].GetComponent<Flicker>();
+            lightAudio[i] = lights[i].GetComponent<AudioSource>();
+        }
     }
 
     // Update is called once per frame
@@ -66,10 +75,12 @@ public class LightsController : MonoBehaviour
             if (random < 0.0005f)
             {
                 Debug.Log("flicker everything!");
-                foreach (Flicker lightSource in lightScripts)
+                //foreach (Flicker lightSource in lightScripts)
+                for (int i = 0; i < lightScripts.Length; i++)
                 {
-                    lightSource.ChangeStates(ControllerType.IntermittentFlicker);
-                    lightSource.CurrentFlickerDuration = flickerDuration;
+                    lightScripts[i].ChangeStates(ControllerType.IntermittentFlicker);
+                    lightScripts[i].CurrentFlickerDuration = flickerDuration;
+                    lightAudio[i].PlayOneShot(lightAudio[i].clip);
                 }
             }
         }
