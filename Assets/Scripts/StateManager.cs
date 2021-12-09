@@ -5,18 +5,11 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityStandardAssets.Characters.FirstPerson;
 
-public enum GameState
-{
-    Title,
-    Game,
-    End
-}
-
 public class StateManager : MonoBehaviour
 {
     [SerializeField] public Canvas pauseCanvas;
 
-    [SerializeField] public GameState gameState;
+    [SerializeField] public bool inGame;
 
     private bool isPaused = false;
 
@@ -32,7 +25,7 @@ public class StateManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameState == GameState.Game)
+        if (inGame)
         {
             if (Input.GetKeyDown(KeyCode.P))
             {
@@ -46,6 +39,7 @@ public class StateManager : MonoBehaviour
         SceneManager.LoadScene("SampleScene");
     }
 
+    //Pauses the game by disabling the time scale
     public void TogglePause()
     {
         isPaused = !isPaused;
