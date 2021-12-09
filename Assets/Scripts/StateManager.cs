@@ -23,15 +23,21 @@ public class StateManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pauseCanvas.gameObject.SetActive(false);
+        if (pauseCanvas != null)
+        {
+            pauseCanvas.gameObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (gameState == GameState.Game)
         {
-            TogglePause();
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                TogglePause();
+            }
         }
     }
 
