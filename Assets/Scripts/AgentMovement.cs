@@ -36,7 +36,9 @@ public class AgentMovement : MonoBehaviour
             if (collision.gameObject.tag == "Player")
             {
                 //GameObject.Find("StateManager").GetComponent<StateManager>().EndGame();
-                SceneManager.LoadScene("SampleScene");
+                SceneManager.LoadScene("gameOverScene");
+
+                Debug.Log("player detected");
             }
         }
     }
