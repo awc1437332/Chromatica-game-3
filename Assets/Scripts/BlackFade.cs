@@ -51,6 +51,7 @@ public class BlackFade : MonoBehaviour
                 if (color.a < 0)
                 {
                     isFinished = true;
+                    Destroy(gameObject);
                 }
             }
             else
@@ -63,6 +64,7 @@ public class BlackFade : MonoBehaviour
                 if (color.a > 255)
                 {
                     isFinished = true;
+                    Destroy(gameObject);
                 }
             }
         }

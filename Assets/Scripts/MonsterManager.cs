@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MonsterManager : MonoBehaviour
 {
     private Material monsterMaterial;
 
-    public bool isFinished;
+    public bool isFinished = false;
 
     // Start is called before the first frame update
     void Start()
@@ -18,9 +19,10 @@ public class MonsterManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        print(GetDistanceToPlayer().magnitude);
         if (GetDistanceToPlayer().magnitude <= 5 && isFinished)
         {
-            Destroy(this);
+            SceneManager.LoadScene("GameFinishedScene");
         }
     }
 

@@ -55,7 +55,7 @@ public class RoomManager : MonoBehaviour
         else //Chase Room
         {
             //Enable and place the monster
-            monster.Activate(_monsterSpawnLocation);
+            monster.Activate(new Vector3(_monsterSpawnLocation.x, 5, _monsterSpawnLocation.z));
 
             //Adjust Atmosphere
         }
