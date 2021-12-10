@@ -9,6 +9,8 @@ public class AgentMovement : MonoBehaviour
     public Transform target;
     private NavMeshAgent agent;
 
+    public bool isActive = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +21,11 @@ public class AgentMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Update agent destination each frame to account for player movement.
-        agent.destination = target.position;
+        if (isActive)
+        {
+            // Update agent destination each frame to account for player movement.
+            agent.destination = target.position;
+        }
     }
 
     public void Activate(Vector3 _position)
