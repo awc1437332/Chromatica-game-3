@@ -12,9 +12,6 @@ public class AgentMovement : MonoBehaviour
 
     public bool isActive = true;
 
-    public static UnityEvent showAgent;
-    public static UnityEvent hideAgent;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +49,12 @@ public class AgentMovement : MonoBehaviour
     public void Deactivate()
     {
         gameObject.SetActive(false);
+    }
+
+    public void Stop()
+    {
+        isActive = false;
+        //agent.isStopped = true;
     }
 
     private void OnCollisionEnter(Collision collision)

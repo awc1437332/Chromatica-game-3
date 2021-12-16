@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public enum ControllerType
 {
     Flicker,
     IntermittentFlicker,
     ChaseStart,
-    ChaseEnd
+    ChaseEnd,
+    ChaseEndSpecial
 }
 
 public class LightsController : MonoBehaviour
@@ -114,21 +116,42 @@ public class LightsController : MonoBehaviour
                     
                     break;
                 case ControllerType.ChaseStart:
+                    // Activate the monster.
                     agentScript.Activate(transform.position 
                                         - new Vector3(10.0f, -1.5f, 0));
-                    //AgentMovement.showAgent.Invoke();
                     foreach (Flicker lightSource in lightScripts)
                         lightSource.ChangeStates(ControllerType.ChaseStart);
                     break;
                 case ControllerType.ChaseEnd:
+                    // Deactivate the monster.
                     agentScript.Deactivate();
-                    //AgentMovement.hideAgent.Invoke();
                     foreach (Flicker lightSource in lightScripts)
                     {
                         lightSource.ChangeStates(ControllerType.ChaseEnd);
                         lightSource.CurrentFlickerDuration = flickerDuration;
                         lightSource.FinalIntensity = finalIntensity;
                     }
+                    break;
+                case ControllerType.ChaseEndSpecial:
+                    foreach (Flicker lightSource in lightScripts)
+                    {
+                        lightSource.ChangeStates(ControllerType.ChaseEnd);
+                        lightSource.CurrentFlickerDuration = flickerDuration;
+                        lightSource.FinalIntensity = finalIntensity;
+                    }
+
+                    GameObject player = GameObject.Find("FPSController");
+                    FirstPersonController playerScript = player.GetComponent<FirstPersonController>();
+
+                    // Stop the agent from moving
+                    agentScript.Stop();
+
+                    // move the player camera. quickly to face the door
+                    playerScript.isActive = false;
+
+                    // pause.
+                    // teleport to agent behind the player
+                    // then move slowly to face behind
                     break;
             }
         }

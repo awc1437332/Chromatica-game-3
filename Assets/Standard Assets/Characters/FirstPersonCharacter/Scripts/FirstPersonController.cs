@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityStandardAssets.Utility;
@@ -89,6 +90,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
         }
 
+        public IEnumerator FaceDoor()
+        {
+            return null;
+        }
+
         private void PlayLandingSound()
         {
             m_AudioSource.clip = m_LandSound;
@@ -120,8 +126,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void FixedUpdate()
         {
-            float speed;
-            GetInput(out speed);
+            float speed = 0;
+            if (isActive) GetInput(out speed);
             // always move along the camera forward as it is the direction that it being aimed at
             Vector3 desiredMove = transform.forward*m_Input.y + transform.right*m_Input.x;
 

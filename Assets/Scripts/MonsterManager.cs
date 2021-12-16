@@ -28,6 +28,7 @@ public class MonsterManager : MonoBehaviour
 
     public void SetColor(Color _color)
     {
+        if (!monsterMaterial) monsterMaterial = GetComponent<Renderer>().material;
         monsterMaterial.color = _color;
     }
 
