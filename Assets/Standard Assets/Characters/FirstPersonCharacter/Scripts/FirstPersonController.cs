@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityStandardAssets.Utility;
 using Random = UnityEngine.Random;
@@ -29,6 +30,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will be randomly selected from.
         [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
+        [SerializeField] private AudioClip balloonPop;
 
         private Camera m_Camera;
         private bool m_Jump;
@@ -103,7 +105,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 // Here we assign the interpolated rotation to transform.rotation
                 // It will range from startRotation (rotationProgress == 0) to endRotation (rotationProgress >= 1)
                 transform.rotation = Quaternion.Lerp(startRotation, endRotation, rotationProgress);
-                yield return new WaitForSeconds(0.01f);
+                yield return new WaitForSeconds(0.001f);
             }
 
             // Pause.
@@ -119,7 +121,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             // Make monster visible again.
             monster.SetActive(true);
 
-            // Turn the player around
+            // Turn the player around to reveal the monster behind them.
             startRotation = transform.rotation;
             endRotation = Quaternion.Euler(new Vector3(0, 270, 0));
             rotationProgress = 0;
@@ -135,6 +137,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
 
             transform.rotation = endRotation;
+
+            // Pause briefly, then bring player to the win screen.
+            yield return new WaitForSeconds(1.5f);
+            m_AudioSource.clip = balloonPop;
+            m_AudioSource.PlayOneShot(m_AudioSource.clip);
+            SceneManager.LoadScene("GameFinishedScene");
         }
 
         private void PlayLandingSound()

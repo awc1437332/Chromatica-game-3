@@ -151,6 +151,8 @@ public class LightsController : MonoBehaviour
                         lightSource.FinalIntensity = finalIntensity;
                     }
 
+                    agentScript.SetColor(Color.white);
+
                     GameObject player = GameObject.Find("FPSController");
                     FirstPersonController playerScript = player.GetComponent<FirstPersonController>();
 

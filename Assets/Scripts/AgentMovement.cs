@@ -10,6 +10,8 @@ public class AgentMovement : MonoBehaviour
     public Transform target;
     private NavMeshAgent agent;
 
+    private Material monsterMaterial;
+
     public bool isActive = true;
 
     // Start is called before the first frame update
@@ -17,6 +19,9 @@ public class AgentMovement : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         gameObject.SetActive(false);
+
+        monsterMaterial = GetComponent<Renderer>().material;
+        monsterMaterial.color = new Color(0, 0, 0);
 
         // Hook up callbacks to events.
         //showAgent.AddListener(Activate);
@@ -54,7 +59,15 @@ public class AgentMovement : MonoBehaviour
     public void Stop()
     {
         isActive = false;
+        agent.destination = agent.transform.position;
+        agent.speed = 0;
         agent.isStopped = true;
+    }
+
+    public void SetColor(Color _color)
+    {
+        if (!monsterMaterial) monsterMaterial = GetComponent<Renderer>().material;
+        monsterMaterial.color = _color;
     }
 
     private void OnCollisionEnter(Collision collision)
