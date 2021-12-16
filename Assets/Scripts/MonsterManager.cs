@@ -19,7 +19,7 @@ public class MonsterManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(GetDistanceToPlayer().magnitude);
+        //print(GetDistanceToPlayer().magnitude);
         if (GetDistanceToPlayer().magnitude <= 5 && isFinished)
         {
             SceneManager.LoadScene("GameFinishedScene");

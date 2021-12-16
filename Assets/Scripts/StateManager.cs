@@ -32,11 +32,22 @@ public class StateManager : MonoBehaviour
                 TogglePause();
             }
         }
+        // Display and re-enable the cursor when a menu screen is displayed.
+        else
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
     }
 
     public void StartGame()
     {
         SceneManager.LoadScene("SampleScene");
+    }
+
+    public void GoToTitle()
+    {
+        SceneManager.LoadScene("TitleScene");
     }
 
     //Pauses the game by disabling the time scale

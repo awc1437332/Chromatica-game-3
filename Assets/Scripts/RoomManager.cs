@@ -21,6 +21,9 @@ public class RoomManager : MonoBehaviour
 
     [SerializeField] public UIManager uIManager;
 
+    [SerializeField] private GameObject lightsControllers;
+    private Vector3 monsterSpawnLocation;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,21 +47,23 @@ public class RoomManager : MonoBehaviour
         //Sets the new room type
         currentType = _roomType;
 
+        monsterSpawnLocation = _monsterSpawnLocation;
+
         //Toggles the monster and atmosphere based on the room type
-        if (currentType != RoomType.Chase)
-        {
-            //Disable the monster
-            monsterObject.SetActive(false);
+        //if (currentType != RoomType.Chase)
+        //{
+        //    //Disable the monster
+        //    monsterObject.SetActive(false);
 
-            //Adjust Atmosphere
-        }
-        else //Chase Room
-        {
-            //Enable and place the monster
-            monster.Activate(new Vector3(_monsterSpawnLocation.x, 5, _monsterSpawnLocation.z));
+        //    //Adjust Atmosphere
+        //}
+        //else //Chase Room
+        //{
+        //    //Enable and place the monster
+        //    monster.Activate(new Vector3(_monsterSpawnLocation.x, 5, _monsterSpawnLocation.z));
 
-            //Adjust Atmosphere
-        }
+        //    //Adjust Atmosphere
+        //}
 
         uIManager.SetObjectiveText(currentType);
     }

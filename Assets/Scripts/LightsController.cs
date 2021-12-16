@@ -52,6 +52,10 @@ public class LightsController : MonoBehaviour
     [SerializeField]
     private float finalIntensity;
 
+    [SerializeField]
+    private GameObject agent;
+    private AgentMovement agentScript;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -59,6 +63,8 @@ public class LightsController : MonoBehaviour
         collided = false;
         lightScripts = new Flicker[lights.Length];
         lightAudio = new AudioSource[lights.Length];
+        agentScript = agent.GetComponent<AgentMovement>();
+
         for (int i = 0; i < lightScripts.Length; i++)
         {
             lightScripts[i] = lights[i].GetComponent<Flicker>();
@@ -108,10 +114,15 @@ public class LightsController : MonoBehaviour
                     
                     break;
                 case ControllerType.ChaseStart:
+                    agentScript.Activate(transform.position 
+                                        - new Vector3(10.0f, -1.5f, 0));
+                    //AgentMovement.showAgent.Invoke();
                     foreach (Flicker lightSource in lightScripts)
                         lightSource.ChangeStates(ControllerType.ChaseStart);
                     break;
                 case ControllerType.ChaseEnd:
+                    agentScript.Deactivate();
+                    //AgentMovement.hideAgent.Invoke();
                     foreach (Flicker lightSource in lightScripts)
                     {
                         lightSource.ChangeStates(ControllerType.ChaseEnd);
