@@ -94,6 +94,17 @@ public class LightsController : MonoBehaviour
         }
     }
 
+    private void MoveAgentToPlayer(GameObject player)
+    {
+        // teleport agent to behind the player and ensure it faces them when
+        // they turn around.
+        agent.transform.position = player.transform.position - new Vector3(10.0f, -1.5f, 0);
+        agent.transform.rotation = Quaternion.Euler(new Vector3(0, 90, 0));
+        //agent.transform.position = new Vector3(43.3f, 1, -315.56f);
+
+        agent.SetActive(true);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         // Use a guard, so the controller can only be triggered once.
@@ -145,12 +156,14 @@ public class LightsController : MonoBehaviour
 
                     // Stop the agent from moving
                     agentScript.Stop();
+                    //agent.SetActive(false);
 
                     // move the player camera. quickly to face the door
                     playerScript.isActive = false;
+                    StartCoroutine(playerScript.FaceDoor());
 
-                    // pause.
-                    // teleport to agent behind the player
+                    //Invoke()
+
                     // then move slowly to face behind
                     break;
             }

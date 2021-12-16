@@ -54,7 +54,7 @@ public class AgentMovement : MonoBehaviour
     public void Stop()
     {
         isActive = false;
-        //agent.isStopped = true;
+        agent.isStopped = true;
     }
 
     private void OnCollisionEnter(Collision collision)

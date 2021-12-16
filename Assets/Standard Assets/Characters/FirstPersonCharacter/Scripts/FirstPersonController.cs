@@ -92,7 +92,49 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         public IEnumerator FaceDoor()
         {
-            return null;
+            Quaternion startRotation = transform.rotation;
+            Quaternion endRotation = Quaternion.Euler(new Vector3(0, 90, 0));
+            float rotationProgress = 0;
+
+            while (rotationProgress < 1 && rotationProgress >= 0)
+            {
+                rotationProgress += Time.deltaTime;
+
+                // Here we assign the interpolated rotation to transform.rotation
+                // It will range from startRotation (rotationProgress == 0) to endRotation (rotationProgress >= 1)
+                transform.rotation = Quaternion.Lerp(startRotation, endRotation, rotationProgress);
+                yield return new WaitForSeconds(0.01f);
+            }
+
+            // Pause.
+            yield return new WaitForSeconds(2.5f);
+
+            // teleport agent to behind the player and ensure it faces them when
+            // they turn around.
+            GameObject monster = GameObject.Find("Monster");
+            monster.SetActive(false);
+            monster.transform.position = transform.position - new Vector3(10.0f, -1.5f, 0);
+            monster.transform.rotation = Quaternion.Euler(new Vector3(0, 90, 0));
+
+            // Make monster visible again.
+            monster.SetActive(true);
+
+            // Turn the player around
+            startRotation = transform.rotation;
+            endRotation = Quaternion.Euler(new Vector3(0, 270, 0));
+            rotationProgress = 0;
+
+            while (rotationProgress < 1 && rotationProgress >= 0)
+            {
+                rotationProgress += Time.deltaTime;
+
+                // Here we assign the interpolated rotation to transform.rotation
+                // It will range from startRotation (rotationProgress == 0) to endRotation (rotationProgress >= 1)
+                transform.rotation = Quaternion.Lerp(startRotation, endRotation, rotationProgress);
+                yield return new WaitForSeconds(0.025f);
+            }
+
+            transform.rotation = endRotation;
         }
 
         private void PlayLandingSound()
