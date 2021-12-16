@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public enum ControllerType
 {
     Flicker,
     IntermittentFlicker,
     ChaseStart,
-    ChaseEnd
+    ChaseEnd,
+    ChaseEndSpecial
 }
 
 public class LightsController : MonoBehaviour
@@ -52,6 +54,10 @@ public class LightsController : MonoBehaviour
     [SerializeField]
     private float finalIntensity;
 
+    [SerializeField]
+    private GameObject agent;
+    private AgentMovement agentScript;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -59,6 +65,8 @@ public class LightsController : MonoBehaviour
         collided = false;
         lightScripts = new Flicker[lights.Length];
         lightAudio = new AudioSource[lights.Length];
+        agentScript = agent.GetComponent<AgentMovement>();
+
         for (int i = 0; i < lightScripts.Length; i++)
         {
             lightScripts[i] = lights[i].GetComponent<Flicker>();
@@ -86,6 +94,17 @@ public class LightsController : MonoBehaviour
         }
     }
 
+    private void MoveAgentToPlayer(GameObject player)
+    {
+        // teleport agent to behind the player and ensure it faces them when
+        // they turn around.
+        agent.transform.position = player.transform.position - new Vector3(10.0f, -1.5f, 0);
+        agent.transform.rotation = Quaternion.Euler(new Vector3(0, 90, 0));
+        //agent.transform.position = new Vector3(43.3f, 1, -315.56f);
+
+        agent.SetActive(true);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         // Use a guard, so the controller can only be triggered once.
@@ -108,16 +127,46 @@ public class LightsController : MonoBehaviour
                     
                     break;
                 case ControllerType.ChaseStart:
+                    // Activate the monster.
+                    agentScript.Activate(transform.position 
+                                        - new Vector3(10.0f, -1.5f, 0));
                     foreach (Flicker lightSource in lightScripts)
                         lightSource.ChangeStates(ControllerType.ChaseStart);
                     break;
                 case ControllerType.ChaseEnd:
+                    // Deactivate the monster.
+                    agentScript.Deactivate();
                     foreach (Flicker lightSource in lightScripts)
                     {
                         lightSource.ChangeStates(ControllerType.ChaseEnd);
                         lightSource.CurrentFlickerDuration = flickerDuration;
                         lightSource.FinalIntensity = finalIntensity;
                     }
+                    break;
+                case ControllerType.ChaseEndSpecial:
+                    foreach (Flicker lightSource in lightScripts)
+                    {
+                        lightSource.ChangeStates(ControllerType.ChaseEnd);
+                        lightSource.CurrentFlickerDuration = flickerDuration;
+                        lightSource.FinalIntensity = finalIntensity;
+                    }
+
+                    agentScript.SetColor(Color.white);
+
+                    GameObject player = GameObject.Find("FPSController");
+                    FirstPersonController playerScript = player.GetComponent<FirstPersonController>();
+
+                    // Stop the agent from moving
+                    agentScript.Stop();
+                    //agent.SetActive(false);
+
+                    // move the player camera. quickly to face the door
+                    playerScript.isActive = false;
+                    StartCoroutine(playerScript.FaceDoor());
+
+                    //Invoke()
+
+                    // then move slowly to face behind
                     break;
             }
         }

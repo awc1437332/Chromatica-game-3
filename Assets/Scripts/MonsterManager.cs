@@ -19,7 +19,7 @@ public class MonsterManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(GetDistanceToPlayer().magnitude);
+        //print(GetDistanceToPlayer().magnitude);
         if (GetDistanceToPlayer().magnitude <= 5 && isFinished)
         {
             SceneManager.LoadScene("GameFinishedScene");
@@ -28,6 +28,7 @@ public class MonsterManager : MonoBehaviour
 
     public void SetColor(Color _color)
     {
+        if (!monsterMaterial) monsterMaterial = GetComponent<Renderer>().material;
         monsterMaterial.color = _color;
     }
 

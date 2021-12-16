@@ -41,7 +41,7 @@ public class AudioController : MonoBehaviour
     private void OnTriggerEnter(Collider collider)
     {
         // Only allow trigger to activate once.
-        if (!collided)
+        if (!collided && collider.CompareTag("Player"))
         {
             collided = true;
 
